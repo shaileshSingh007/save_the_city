@@ -34,8 +34,7 @@ $(document).ready(function() {
   var speedInt2;
   var speedInt3;
 
-  let chv =parseInt($('#cityhealth').width(),10);
-
+   
   let wind_w = window.innerWidth;
   let wind_h = window.innerHeight;
   if(wind_h<wind_w){ $('#Mcontainer').css({'width':'30%'}); } else { $('#Mcontainer').css({'width':'100%'}); }
@@ -102,10 +101,7 @@ function getdata(){
         }else if(currCH>160){ $("#SOC_CH").css({"background":"red"}); }   
 }
 // calling the saved data in local storage
-setTimeout(function(){ getdata(); },1);
-
-
- 
+setTimeout(function(){ getdata();},1);
 
   //collision with hero
 
@@ -187,8 +183,7 @@ setTimeout(function(){ getdata(); },1);
     let LiveL = $("#Hlevel").height();
     
     let scoreL = $("#Slevel").height();
-    let cityB = parseInt($("#citybad").width(),10);
-
+    
   // getting position of all power blocks
     const PB1Y = $("#speedUp").position().top;
     const PB1X = $("#speedUp").position().left;
@@ -240,8 +235,7 @@ setTimeout(function(){ getdata(); },1);
       red1b.css({ left: red1rand + "px", top: -topR1 + "px" });
       
       y++;
-      cityB = cityB-0.5;
-      $("#citybad").css({"width":cityB+"px"});
+      
       
     }
 
@@ -249,8 +243,7 @@ setTimeout(function(){ getdata(); },1);
       red2b.css({ left: red2rand + "px", top: -topR2 + "px" });
      
       y++;
-      cityB = cityB-0.5;
-      $("#citybad").css({"width":cityB+"px"});
+      
       
     }
 
@@ -258,8 +251,7 @@ setTimeout(function(){ getdata(); },1);
       black1b.css({ left: black1rand + "px", top: -topB1 + "px" });
       y++;
       gifplay(black1X, contaH);
-      cityB = cityB+2;
-      $("#citybad").css({"width":cityB+"px"});
+     
       
     }
 
@@ -267,8 +259,7 @@ setTimeout(function(){ getdata(); },1);
       black2b.css({ left: black2rand + "px", top: -topB2 + "px" });
       y++;
       gifplay(black2X, contaH);
-      cityB = cityB+2;
-      $("#citybad").css({"width":cityB+"px"});
+      
       
     }
 
@@ -323,24 +314,12 @@ setTimeout(function(){ getdata(); },1);
 
   //  game over conditions
    
-  if(LiveL <= 0 || cityB >= chv){
+  if(LiveL <= 0){
     gameover.play();
     //bgsound.pause();
     $("#STC_GameOver").show();
     $("#STC_GO_HC").text(z*10);
     
-    savescores(z, cityB);
-       if(cityB<40){
-        $("#STC_GO_CH").css({"background":"green"});    
-       }else if(cityB>40 && cityB<80){
-        $("#STC_GO_CH").css({"background":"blue"});    
-       }else if(cityB>80 && cityB<120){
-        $("#STC_GO_CH").css({"background":"yellow"});    
-       }else if(cityB>120 && cityB<160){
-        $("#STC_GO_CH").css({"background":"orange"});    
-       }else if(cityB>160){
-        $("#STC_GO_CH").css({"background":"red"});    
-       }
 
     red1b.css({ left: red1rand + "px", top: -topR1 + "px" });
     red2b.css({ left: red2rand + "px", top: -topR2 + "px" });
@@ -359,7 +338,7 @@ setTimeout(function(){ getdata(); },1);
     y=0;
     $("#Hlevel").css({height:"100%"});
     $("#Slevel").css({height:"4px"});
-    $("#citybad").css({width:"50%"});
+    
     return;
   }
 

@@ -95,8 +95,11 @@ body {
 
 #STC_GO_CH{width:15%; padding-top:15%; border-radius:50%; background:transparent; box-shadow:0 0 10px whitesmoke; position: absolute; left:60%; top:59%; }
 
-#STC_GO_Play{width:15%; padding-top:15%; background: url(../img/start.png) no-repeat center/100% 100%; border-radius:50%; box-shadow:0 0 35px grey inset; position: absolute; left:40%; top:70%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center; color:gainsboro; font-size: 45px; }
+#STC_GO_Play{width:15%; padding-top:15%; background:lightblue; border-radius:50%; position: absolute; left:40%; top:70%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center; color:gainsboro; font-size: 45px; }
+#STC_GO_Play i{color:lightblue; font-size:1.0em; position: absolute; left:56%; top:50%; transform: translate(-50%,-50%); text-shadow:2px 2px 4px black; }
+
 #STC_GO_Play:active,#STC_exit:active{opacity:0.3;}
+
 #STC_exit{width:15%; padding-top:15%; background: url(../img/exit.png) no-repeat center/100% 100%; border-radius:50%; box-shadow:0 0 35px grey inset; position: absolute; left:58%; top:70%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center; color:gainsboro; font-size: 45px; }
 
 
