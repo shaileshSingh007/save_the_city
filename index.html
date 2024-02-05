@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+       
+        <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval';
+               style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+               media-src *;
+               img-src 'self' data: content:;
+               script-src 'self' 'unsafe-inline' https://example.com https://cdn.example.com https://code.jquery.com https://cdnjs.cloudflare.com;
+               font-src 'self' data: https://cdnjs.cloudflare.com;">
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/jquery_ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+        
+        <title>SaveTheCity</title>
+    </head>
+    <body>
+       <!-- all sounds -->
+       <audio id="clicksound"><source src="../www/sounds/clicksound.mp3" type="audio/mp3"></audio>
+       <audio id="burstsound"><source src="../www/sounds/fireB.wav" type="audio/wav"></audio>
+       <audio id="lifeloose"><source src="../www/sounds/liveloose.wav" type="audio/wav"></audio>
+       <audio id="gameoversound"><source src="../www/sounds/gameover.wav" type="audio/wav"></audio>
+       <audio id="bgsound"><source src="../www/sounds/bgsound.mp3" type="audio/mp3"></audio>
+
+       <div id="Mcontainer">
+        <div class="app">
+            <div id="contop"></div>
+            <div id="container">
+                  
+                 <img id="burst"/>
+                 <div id="red1"><img src="./img/fire.gif" ></div>
+                 <div id="red2"><img src="./img/fire.gif" ></div>
+                 <div id="speedUp"></div>
+                 <div id="speedDown"></div>
+                 <div id="scoreUp"></div>
+                 <div id="black1"><img src="./img/fire.gif" id="fire"></div>
+                 <div id="black2"><img src="./img/fire.gif" id="fire"></div>
+                 <div id="MyHero"></div>
+                 <div id="base"></div>
+             </div>
+             <div id="gameback"></div>
+             <div id="mutesound"></div>
+             <div id="health">
+                <div id="Hlevel">
+                   <img id="heart" src="./img/heart.gif" />
+                </div>
+             </div>
+      
+            <div id="scoreD">
+                <div id="Slevel">
+                  <div id="score">0</div>
+                </div> 
+            </div>
+            <div id="cityhealth">
+                  <div id="citybad"></div>
+            </div>
+            <div id="dragaro"></div>
+            
+          </div>
+      
+      <!-- start page -->
+      <div id="mainpage">
+        <div id="SOC"></div>
+        <div id="SOC_CH"></div>
+        <div id="SOC_HS"> <div id="SOC_HSN"></div> </div>
+        <div id="SOC_start"><i class="fa-solid fa-play"></i></div>
+        <div id="SOC_quate">Protect the city, block the menace! Shave the city from the steroid storm before it crushes us all!</div>
+      </div>
+      
+      <!-- end start page -->
+      
+      <div id="Playtimer"></div>
+      
+      <!-- Game Over Page -->
+      
+      <div id="STC_GameOver">
+         <div id="GameOverName">
+            <div id="GO_G">G</div> <div id="GO_A">A</div> <div id="GO_M">M</div> <div id="GO_E">E</div> <div id="GO_O">O</div> <div id="GO_V">V</div> <div id="GO_E1">E</div> <div id="GO_R">R</div>
+         </div>
+         <div id="STC_GO_HC">0</div>
+         <div id="STC_GO_CH"></div>
+         <div id="STC_exit"></div>
+         <div id="STC_GO_Play"></div>
+        </div>
+      </div>
+   </body>
+</html>
